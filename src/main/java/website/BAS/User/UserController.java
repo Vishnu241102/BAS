@@ -1,6 +1,7 @@
 package website.BAS.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -164,6 +165,16 @@ public List<user> getStudents(@RequestParam(name = "type") String type){
       } catch (Exception e) {
          // You may want to customize the exception handling
          return ResponseEntity.badRequest().build();
+      }
+   }
+
+   @PostMapping("/buyThis")
+   public ResponseEntity<Object> buyThis(@RequestBody user buyRequest) {
+      try {
+         userService.buyThis(buyRequest.getId(), buyRequest.getEmail());
+         return new ResponseEntity<>("Success", HttpStatus.OK);
+      } catch (Exception e) {
+         return new ResponseEntity<>("Error", HttpStatus.INTERNAL_SERVER_ERROR);
       }
    }
 }
