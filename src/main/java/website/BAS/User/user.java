@@ -21,6 +21,8 @@ public class user {
     private String category;
     private String phoneNo;
     private String hobbies;
+    private String hobbies1;
+    private String hobbies2;
     private String emailId;
     private String email;
     private Date date;
