@@ -20,6 +20,8 @@ public class user {
     private String specs;
     private String category;
     private String phoneNo;
+    private String hobbies;
+    private String emailId;
     private String email;
     private Date date;
     private String istDate;
