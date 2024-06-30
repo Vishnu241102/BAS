@@ -19,6 +19,7 @@ public class user {
     private String product;
     private String specs;
     private String category;
+    private String phoneNo;
     private String email;
     private Date date;
     private String contact;
