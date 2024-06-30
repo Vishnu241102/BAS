@@ -22,6 +22,7 @@ public class user {
     private String phoneNo;
     private String email;
     private Date date;
+    private String istDate;
     private String contact;
     private List<String> images;
     private List<String> customers;
